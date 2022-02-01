@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Account Details" icon-name="custom:custom21"> 
+        
+        <template if:true={accounts.data}>
+            <template for:each = {accounts.data} for:item = "acc">
+                <p key={acc.id}> {acc.Name} ---> {acc.Phone} </p>
+                    
+                
+            </template>
+        </template>
+
+        <template if:false={accounts.error}>
+            {accounts.error}
+        </template>
+    </lightning-card>
+</template>
